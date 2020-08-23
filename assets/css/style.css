@@ -6,6 +6,7 @@
   background-color: rgba(0, 0, 0, 0);
 }
 
+/* The .fixed selectors are to create a solid navbar when moved away from the hero */
 .fixed-top.scrolled {
   background-color: #03aab6 !important;
   transition: background-color 200ms linear;
@@ -18,7 +19,7 @@
 .navbar-brand {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
-  font-size: xxx-large;
+  font-size: xx-large;
 }
 
 .navbar-toggler:focus,
@@ -39,7 +40,7 @@
 }
 
 .nav-item {
-  text-align: center;
+  text-align: right;
 }
 
 .navbar-nav a:hover {
@@ -60,6 +61,7 @@
   z-index: 0;
 }
 
+/* background-mobile is to use a image instead of a video when on mobile */
 .background-mobile {
   display: none;
   background: url(../images/background_mobile.jpg) no-repeat center top;
@@ -81,7 +83,7 @@
 }
 
 .social-bar {
-  text-align: end;
+  text-align: center;
 }
 
 .social-bar .social-icon {
@@ -93,6 +95,7 @@
   padding-bottom: 10px;
 }
 
+/* The keyframes are to create the bounce affect and transitions for the go down arrow */
 @-moz-keyframes bounce {
   0%,
   20%,
@@ -187,6 +190,7 @@ i {
     top: 30%;
   }
 
+  /* Replace background video with image on mobiles */
   #home-hero-video {
     display: none !important;
   }
@@ -200,4 +204,79 @@ i {
     position: relative;
     z-index: 0;
   }
+
+  /* The following collapse selectors is add an overlay when expanding the navbar menu on mobiles */
+  .collapse:after {
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: opacity 0.15s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+  }
+  .collapse.show .nav-link {
+    position: relative;
+    z-index: 12;
+  }
+  .collapse.show:after {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    position: fixed;
+  }
+
+  /* This media query selector is to fix the image when viewed in portrait */
+  .profile-pic {
+    width: 100%;
+    height: auto !important;
+    padding-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 820px) and (orientation: landscape) {
+  .hero-content{
+    top: 30%;
+  }
+  
+  /* Replace background video with image on mobiles */
+  #home-hero-video {
+    display: none !important;
+  }
+
+  .background-mobile {
+    display: block;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+    z-index: 0;
+  }
+}
+
+.main-article {
+  padding-top: 10%;
+  font-family: "Roboto", sans-serif;
+}
+
+.main-article h1 {
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main-article section {
+  font-weight: 100;
+}
+
+.profile-pic {
+  height: 200px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
