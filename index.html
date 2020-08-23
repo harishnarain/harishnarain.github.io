@@ -2,6 +2,11 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+
     <title>Harish Narain | Full Stack Developer</title>
 
     <!-- 3rd party stylesheets and fonts -->
@@ -51,6 +56,33 @@
           <a class="navbar-brand" href="#">
             HN
           </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbar-items"
+            aria-controls="navbarItems"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <!-- <span class="navbar-toggler-icon"></span> -->
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse navbar-items" id="navbar-items">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#"
+                  >About Me <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Me</a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </header>
       <div class="container-fluid hero-container">
@@ -72,16 +104,18 @@
             </div>
           </div>
           <div class="row">
-            <div class="hero-subtitle col-md-6">
+            <div class="hero-subtitle col-md-12">
               <h2>
                 Full Stack Developer
               </h2>
             </div>
-            <div class="social-bar col-md-6">
+          </div>
+          <div class="row">
+            <div class="social-bar col-md-12">
               <div class="row">
                 <div class="col-md-12">
                   <img
-                    class="social-icon float-right"
+                    class="social-icon"
                     src="assets/images/facebook_icon.svg"
                     alt="facebook icon"
                     aria-labelledby="facebook icon"
@@ -91,7 +125,7 @@
               <div class="row">
                 <div class="col-md-12">
                   <img
-                    class="social-icon float-right"
+                    class="social-icon"
                     src="assets/images/twitter_icon.svg"
                     alt="twitter icon"
                     aria-labelledby="twitter icon"
@@ -101,7 +135,7 @@
               <div class="row">
                 <div class="col-md-12">
                   <img
-                    class="social-icon float-right"
+                    class="social-icon"
                     src="assets/images/linkedin_icon.svg"
                     alt="linkedin icon"
                     aria-labelledby="linkedin icon"
@@ -111,7 +145,7 @@
               <div class="row">
                 <div class="col-md-12">
                   <img
-                    class="social-icon float-right"
+                    class="social-icon"
                     src="assets/images/github_icon.png"
                     alt="github icon"
                     aria-labelledby="github icon"
@@ -120,10 +154,11 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="arrow bounce">
-          <i class="fa fa-angle-down fa-5x" aria-hidden="true"></i>
+          <div class="row">
+            <div class="arrow bounce col-md-12">
+              <i class="fa fa-angle-down fa-5x" aria-hidden="true"></i>
+            </div>
+          </div>
         </div>
       </div>
 

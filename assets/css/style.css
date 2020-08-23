@@ -21,6 +21,29 @@
   font-size: xxx-large;
 }
 
+.navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-items {
+  font-family: "Roboto", sans-serif;
+  font-size: x-large;
+  font-weight: 300;
+}
+
+.navbar-items li {
+  padding: 0px 10px;
+}
+
+.nav-item {
+  text-align: center;
+}
+
+.navbar-nav a:hover {
+  border-bottom: 1px solid #fff;
+}
+
 .hero-container {
   position: relative;
   padding: 0%;
@@ -48,6 +71,10 @@
 
 .hero-subtitle {
   padding-left: 15%;
+}
+
+.social-bar {
+  text-align: end;
 }
 
 .social-bar .social-icon {
@@ -127,12 +154,29 @@ i {
 
 .arrow {
   position: absolute;
-  bottom: 5%;
-  left: 50%;
+  text-align: center;
+  padding-top: 40px;
 }
 
 .bounce {
   -moz-animation: bounce 2s infinite;
   -webkit-animation: bounce 2s infinite;
   animation: bounce 2s infinite;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero-title,
+  .hero-subtitle {
+    text-align: center;
+    padding-left: 0%;
+  }
+
+  .social-bar {
+    text-align: center;
+    padding-top: 30px;
+  }
+
+  .hero-content {
+    top: 30%;
+  }
 }
