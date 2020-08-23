@@ -280,3 +280,47 @@ i {
 html {
   scroll-behavior: smooth;
 }
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  /* line-height: 60px; */
+  background-color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer .social-bar {
+  text-align: left;
+  padding: 10px 0px 0px 0px;
+}
+
+.footer .social-icon {
+  width: 45px;
+  height: 45px;
+  background-size: 30px 30px;
+}
+
+.contact-details {
+  font-weight: 300;
+  color: #fff;
+  padding-top: 10px;
+}
+
+.region {
+  color: #03aab6;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.2em;
+  margin-bottom: 0px;
+}
+
+.address, .telephone {
+  margin: 0 0 1em;
+  margin-bottom: 1em;
+}
+
+.copyright {
+  color: #424242;
+}
