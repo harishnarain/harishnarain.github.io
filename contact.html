@@ -46,14 +46,13 @@
     ></script>
 
     <!-- App specific scripts-->
+    <script src="assets/js/contact.js"></script>
   </head>
 
   <body>
     <header>
       <nav class="navbar navbar-dark navbar-expand-lg fixed-top scrolled">
-        <a class="navbar-brand" href="index.html">
-          HN
-        </a>
+        <a class="navbar-brand" href="index.html"> HN </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -98,31 +97,25 @@
         <div class="contact-container mx-5 p-5">
           <div class="row">
             <div class="col-md-12">
-              <h4 class="contact-heading mb-3">
+              <h4 class="contact-heading mb-3" id="contact-heading">
                 Your contact details:
               </h4>
             </div>
           </div>
-          <form>
+          <form id="contact-form" onsubmit="return submitContactForm()">
             <div class="row">
               <div class="col-md-6 mb-3">
-                <label for="firstName">
-                  First name
-                </label>
+                <label for="firstName"> First name </label>
                 <input type="text" class="form-control" id="firstName" />
               </div>
               <div class="col-md-6 mb-3">
-                <label for="lastName">
-                  Last name
-                </label>
+                <label for="lastName"> Last name </label>
                 <input type="text" class="form-control" id="lastName" />
               </div>
             </div>
             <div class="row">
               <div class="col-md-12 mb-3">
-                <label for="email">
-                  Email
-                </label>
+                <label for="email"> Email </label>
                 <input
                   type="email"
                   class="form-control"
@@ -133,20 +126,27 @@
             </div>
             <div class="row">
               <div class="col-md-12 mb-3">
-                <label for="message">
-                  Message
-                </label>
+                <label for="message"> Message </label>
                 <textarea class="form-control" id="message" rows="3"></textarea>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12 mb-2 mt-4">
+                <!-- Below should be type="submit" however I'm using button to use onClick to prevent re-render -->
                 <button class="btn btn-primary btn-lg btn-block" type="submit">
                   SUBMIT
                 </button>
               </div>
             </div>
           </form>
+          <div class="row confirmation" id="confirmation">
+            <div class="col-md-12">
+              <h4>Thank you!</h4>
+            </div>
+            <div class="col-md-12">
+              <p>You should hear back from me soon!</p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -188,16 +188,12 @@
                   xxth Floor
                   <br />
                 </span>
-                <span class="city">
-                  Vancouver, BC V6X 1X1
-                </span>
+                <span class="city"> Vancouver, BC V6X 1X1 </span>
               </p>
               <p class="telephone">
                 PH:
                 <a href="#">
-                  <span>
-                    1-604-XXX-XXXX
-                  </span>
+                  <span> 1-604-XXX-XXXX </span>
                 </a>
               </p>
               <p class="directions">
