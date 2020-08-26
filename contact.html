@@ -46,12 +46,11 @@
     ></script>
 
     <!-- App specific scripts-->
-    <script src="assets/js/index.js"></script>
   </head>
 
   <body>
     <header>
-      <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+      <nav class="navbar navbar-dark navbar-expand-lg fixed-top scrolled">
         <a class="navbar-brand" href="index.html">
           HN
         </a>
@@ -69,16 +68,18 @@
         </button>
         <div class="collapse navbar-collapse navbar-items" id="navbar-items">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#about-me"
-                >About Me <span class="sr-only">(current)</span></a
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#about-me">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio.html"
+                >Portfolio <span class="sr-only">(current)</span></a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="portfolio.html">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Me</a>
+            <li class="nav-item active">
+              <a class="nav-link" href="contact.html"
+                >Contact Me <span class="sr-only">(current)</span></a
+              >
             </li>
           </ul>
         </div>
@@ -86,119 +87,70 @@
     </header>
 
     <main>
-      <div class="container-fluid hero-container">
-        <video
-          id="home-hero-video"
-          autoplay
-          muted
-          loop
-        >
-          <source type="video/mp4" src="assets/videos/coding-video.mp4" />
-        </video>
-        <div class="background-mobile"></div>
-        <div class="hero-content container-fluid">
-          <div class="row">
-            <div class="hero-title col-md-12">
-              <h1>Harish Narain</h1>
-            </div>
-          </div>
-          <div class="row">
-            <div class="hero-subtitle col-md-12">
-              <h2>
-                Full Stack Developer
-              </h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="social-bar col-sm-12">
-              <a target="_blank" href="https://twitter.com/harishnarain">
-                <img
-                  class="social-icon"
-                  src="assets/images/twitter_icon.svg"
-                  alt="twitter icon"
-                />
-              </a>
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/in/harishnarain"
-              >
-                <img
-                  class="social-icon"
-                  src="assets/images/linkedin_icon.svg"
-                  alt="linkedin icon"
-                />
-              </a>
-              <a target="_blank" href="https://github.com/harishnarain">
-                <img
-                  class="social-icon"
-                  src="assets/images/github_icon.png"
-                  alt="github icon"
-                />
-              </a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="arrow bounce col-md-12">
-              <a href="#about-me">
-                <i class="fa fa-angle-down fa-5x" aria-hidden="true"></i>
-              </a>
-            </div>
+      <div class="container-fluid main-article" id="contact">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Contact Me</h1>
           </div>
         </div>
       </div>
-
-      <article class="container main-article" id="about-me">
-        <section class="row">
-          <div class="col-md-12">
-            <h1>Who's Harish?</h1>
+      <div class="contact-background container-fluid py-5">
+        <div class="contact-container mx-5 p-5">
+          <div class="row">
+            <div class="col-md-12">
+              <h4 class="contact-heading mb-3">
+                Your contact details:
+              </h4>
+            </div>
           </div>
-        </section>
-        <section class="row">
-          <div class="col-md-9 mb-3">
-            <img
-              src="assets/images/harish_profile.JPG"
-              class="img-responsive float-left mr-3 profile-pic rounded"
-              alt="harish profile picture"
-            />
-            <p>
-              I'm a full stack developer with an obsession for driving positive
-              change in the world through technology. While being enthusiastic
-              of the technology behind solutions, I use lean startup principles
-              to ensure user adoption and efficiency is encompassed into the
-              development cycle.
-            </p>
-            <p>
-              I've been working in technology for over two decades. My
-              experience with cloud computing and infrastructure provide the
-              breadth required to ensure success.
-            </p>
-            <p>
-              My work experience covers working in the financial sector, and IT
-              consulting. Currently for the last 8 years I've been working for
-              Microsoft working on helping customers deploy cloud solutions.
-            </p>
-          </div>
-          <aside class="col-md-3 mb-3">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">Colleague</h5>
-                <h6 class="card-subtitle mb-2 text-muted">As a consultant</h6>
-                <p class="card-text">
-                  I had the pleasure of working with Harish directly, and
-                  continue to realize the value he brought. Practice-wide
-                  delivery quality improved immediately as a result of Harish’s
-                  efforts with standardizing the structure and deliverables of
-                  our UC engagements. Harish’s legacy of excellence lives on
-                  within our community, and he continues to garner praise from
-                  his peers. His technical expertise is surpassed only by his
-                  commitment to The Client. I proudly recommend Harish.
-                </p>
+          <form>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">
+                  First name
+                </label>
+                <input type="text" class="form-control" id="firstName" />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">
+                  Last name
+                </label>
+                <input type="text" class="form-control" id="lastName" />
               </div>
             </div>
-          </aside>
-        </section>
-      </article>
-      <footer class="footer">
+            <div class="row">
+              <div class="col-md-12 mb-3">
+                <label for="email">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="you@example.com"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 mb-3">
+                <label for="message">
+                  Message
+                </label>
+                <textarea class="form-control" id="message" rows="3"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 mb-2 mt-4">
+                <button class="btn btn-primary btn-lg btn-block" type="submit">
+                  SUBMIT
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <footer class="footer footer-normal">
         <div class="container">
           <div class="row">
             <div class="col-md-6 social-bar">
