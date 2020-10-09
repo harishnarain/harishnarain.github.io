@@ -360,6 +360,11 @@ html {
   color: #424242;
 }
 
+.card {
+  width: 18rem;
+  margin-bottom: 50px;
+}
+
 .card-text {
   font-weight: 300;
   font-size: medium;
